@@ -10,6 +10,21 @@
 	<link href="Styling/main.css" rel="stylesheet" />
 	<script src="Scripts/jquery-3.1.0.min.js"></script>
 	<script src="Scripts/bootstrap.min.js"></script>
+	
+	  <script type="text/javascript">
+        function openChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "";
+            var img = document.getElementById("chat-button");
+            img.className = "hide";
+        }
+        function closeChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "hide";
+            var img = document.getElementById("chat-button");
+            img.className = "";
+        }
+    </script>
 
 </head>
 <body>
@@ -32,6 +47,13 @@
 				<p>The UX Research Part is literally a group that research users' experiences for the purpose of identifying steps a service must take in order to become a mo...
                                         </p>
 			</div>
+		 <div id="chat">
+        <img id="chat-button" src="chatico.png" onclick="openChat()" />
+        <div id="chat-frame" class="hide">
+		<iframe src='https://webchat.botframework.com/embed/Contoso-Bot-mham?s=AsNGIHqvy7Q.cwA.xyw.elHs6pnpyEoih8gUrGpUnbHppXG2WiC7j98WBiBnqaY'></iframe>
+            <img src="minus.png" onclick="closeChat()" />
+        </div>
+    </div>
 		</div>
 	</div>
 </body>
